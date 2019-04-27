@@ -4,12 +4,6 @@ public class BinarySearchImpl {
 
     public int binarySearch(int[] numbers, int numberToSearchFor){
         // sort numbers
-//        BubbleSortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
-//        bubbleSortAlgorithm.sort(numbers);
-
-//        QuickSortAlgorithm quickSortAlgorithm = new QuickSortAlgorithm();
-//        quickSortAlgorithm.sort(numbers);
-
         SortAlgorithm sortAlgorithm = new BubbleSortAlgorithm();
         sortAlgorithm.sort(numbers);
 
