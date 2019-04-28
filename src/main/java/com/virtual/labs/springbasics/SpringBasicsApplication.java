@@ -22,6 +22,12 @@ public class SpringBasicsApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        logger.info("========= Found -> {}", personJdbcDao.finaAll());
+        logger.info("========= Find people -> {}", personJdbcDao.findAll());
+
+        logger.info("========= Find people by id -> {}", personJdbcDao.findById(10001));
+
+        logger.info("========= Find people by name -> {}", personJdbcDao.findByName("Edward"));
+
+        logger.info("========= Find people by location -> {}", personJdbcDao.findByLocation("California"));
     }
 }
