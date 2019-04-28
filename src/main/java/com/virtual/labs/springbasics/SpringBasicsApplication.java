@@ -11,12 +11,7 @@ import java.util.Arrays;
 public class SpringBasicsApplication {
 
     public static void main(String[] args) {
-        ApplicationContext applicationContext = SpringApplication.run(SpringBasicsApplication.class, args);
-        Arrays.stream(applicationContext.getBeanDefinitionNames()).forEach(System.out::println);
-
-        BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
-        int result = binarySearch.search(new int[]{12, 4, 6}, 5);
-        System.out.println("Search result = " + result);
+        SpringApplication.run(SpringBasicsApplication.class, args);
     }
 
 }
