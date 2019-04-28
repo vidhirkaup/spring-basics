@@ -11,8 +11,7 @@ public class BooksController {
     @GetMapping("/books")
     public List<Book> getAllBooks(){
         return Arrays.asList(
-                new Book(1, "Spring In Action", "Josh Long"),
-                new Book(2, "Learning Java 8", "Expert Java")
+                new Book(1, "Spring 2.5 In Action", "Josh Long")
         );
     }
 
