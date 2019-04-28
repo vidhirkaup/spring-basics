@@ -24,10 +24,15 @@ public class SpringBasicsApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         logger.info("========= Find people -> {}", personJdbcDao.findAll());
 
-        logger.info("========= Find people by id -> {}", personJdbcDao.findById(10001));
+        logger.info("========= Find people by id(10001) -> {}", personJdbcDao.findById(10001));
 
-        logger.info("========= Find people by name -> {}", personJdbcDao.findByName("Edward"));
+        logger.info("========= Find people by name(Edward) -> {}", personJdbcDao.findByName("Edward"));
 
-        logger.info("========= Find people by location -> {}", personJdbcDao.findByLocation("California"));
+        logger.info("========= Find people by location(California) -> {}", personJdbcDao.findByLocation("California"));
+
+        logger.info("========= Delete people by id(10002) -> Deleted {}", personJdbcDao.deleteById(10002));
+        logger.info("========= Delete people by id(10008) -> Deleted {}", personJdbcDao.deleteById(10008));
+
+        logger.info("========= Delete people by id(10003 OR California) -> Deleted {}", personJdbcDao.deleteByIdOrLocation(10003, "California"));
     }
 }
